@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500&family=ZCOOL+QingKe+HuangYou&display=swap');
+:root{
+    --primary-color:#ff820d;
+}
+body{
+    background: #eeeeee;
+    margin: 0;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.navbar{
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    .logo{
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size : 1.2em;
+        span {
+            color:var(--primary-color);
+        }
+    }
+
+    nav{
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        place-content: space-between;
+    }
+
+    .mobile_menu{
+        cursor: pointer;
+    }
+
+}
+
+
+
+a{
+    color: #5d5d5d;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    padding : 5em 2em ;
+}
+
+.hero{
+    text-align:center;
+}
+
+.left-col{
+    .subhead {
+        text-transform:uppcase;
+        font-weight : bold;
+        color : gray;
+        letter-spacing: 1em;
+    }
+    h1{
+        font-size : 2.5em;
+        line-height: 1.3em;
+        margin-top: .2em;
+    }
+    .primary-cta{
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        padding : 0.6em 1.3em;
+        size: 1.4em;
+        border-radius:0.5em;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .watch-vidio-cta{
+        display: block;
+        margin-top: 1em;
+        img {
+            margin-right: .5em;
+            size: 5px;
+        }
+    }
+}
