@@ -36,12 +36,15 @@ body {
   place-content: space-between;
 }
 
-.navbar .mobile_menu {
+.navbar .mobile-menu {
   cursor: pointer;
+  padding-right: 0em;
 }
 
 a {
   color: #5d5d5d;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 ul {
@@ -77,7 +80,7 @@ section {
   text-decoration: none;
   padding: 0.6em 1.3em;
   size: 1.4em;
-  border-radius: 0.5em;
+  border-radius: 5em;
   font-weight: bold;
   display: inline-block;
 }
@@ -87,8 +90,46 @@ section {
   margin-top: 1em;
 }
 
-.left-col .watch-vidio-cta img {
+.left-col .watch-vidio-cta .play-icon {
   margin-right: .5em;
-  size: 5px;
+  size: 1px;
+}
+
+.hero-image {
+  width: 70%;
+  margin-top: 5em;
+}
+
+section.feature-section {
+  background: #271900;
+  color: white;
+}
+
+ul.feature-list {
+  margin: 0;
+  padding-left: .1em;
+}
+
+ul.feature-list li {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  position: relative;
+  letter-spacing: 0.2em;
+}
+
+ul.feature-list li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/chip.svg");
+  background-size: contain;
+  margin-right: .2em;
+}
+
+.feature-section img {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
