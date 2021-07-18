@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500&family=ZCOOL+QingKe+HuangYou&display=swap');
 :root{
-    --primary-color:#ff820d;
+    --primary-color:hsl(29, 100%, 53%);
+    --primary-color-dark:hsl(29, 88%, 44%);
 }
 body{
     background: #eeeeee;
@@ -21,8 +22,37 @@ body{
         }
     }
 
+    nav.menu-btn{
+        display:block
+    }
     nav{
         display: none;
+        position:fixed;
+        z-index: 999;
+        width: 66%;
+        right: 0;
+        top:0;
+        background: #333333;
+        height: 100vh;
+        padding: 1em;
+
+        ul.primary-nav{
+            margin-top: 5em;
+        }
+
+        li {
+            a{
+                color:white;
+                text-decoration: none;
+                display: block;
+                padding: .5em;
+                font-size: 1.3em;
+                text-align: right;
+            }
+            &:hover{
+                font-weight: bold;
+            }
+        }
     }
     
     .container {
@@ -32,17 +62,21 @@ body{
 
     .mobile-menu{
         cursor: pointer;
-        padding-right: 0em;
     }
 
 }
 
-
+.mobile-exit{
+    float:right;
+    margin: .5em;
+    cursor: pointer;
+}
 
 a{
     color: #5d5d5d;
     text-decoration-line: none;
 }
+
 
 ul{
     list-style-type: none;
@@ -75,9 +109,9 @@ section{
         color: white;
         text-decoration: none;
         padding : 0.6em 1.3em;
-        size: 1.4em;
         border-radius:5em;
         font-weight: bold;
+        font-size: 1.5em;
         display: inline-block;
     }
 
@@ -109,6 +143,7 @@ ul.feature-list{
         margin-left: 2em;
         margin-bottom: 1em;
         font-size: 1.1em;
+        
         position:relative;
         letter-spacing: 0.2em;
         &:before{
@@ -130,4 +165,112 @@ ul.feature-list{
 
 .feature-section img{
     display:none
+}
+
+section.testmonials-section{
+    background: var(--primary-color);
+    color:white;
+    li {
+        background: var(--primary-color-dark);
+        text-align: center;
+        width: 80%;
+        margin: 0 auto 5em auto;
+        border-radius: 1em;
+        font-size: 1.5em;
+        img{
+            width : 4em;
+            height : 4em;
+            border: 5px solid var(--primary-color-dark);
+            border-radius: 50%;
+            margin-top: -2em;
+        }
+    }
+    cite{
+       text-transform: capitalize; 
+    }
+    .container{
+        text-transform: capitalize;
+    }
+}
+
+h2 {
+    font-size: 2em;
+
+}
+
+label {
+    display:block;
+    font-size : 1.2em;
+    margin-bottom: .5em;
+}
+
+input, textarea{
+    width : 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius : 0.3em;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+//selector
+input[type = 'submit']{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    border:none;
+    margin-bottom: 5em;
+    padding : 0.6em 30%;
+    border-radius: 5em;
+    display: inline-block;
+    cursor:pointer
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+}
+
+
+@media only screen and (min-width: 768px){
+    .mobile-menu, .mobile-exit{
+        display: none
+    }
+
+    .navbar .container{
+        display : grid ; 
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+
+    .navbar.nav{
+        display : flex;
+        justify-content : space-between;
+        background : none;
+        position : unset;
+        height : auto ;
+        width : 100%;
+        padding : 0;
+        ul {
+            display : flex;
+        }
+
+        a {
+            color : black ;
+            font-size:  1em;
+            padding : .1em 1em
+        }
+
+        ul.primary-nav{
+            margin: 0;
+        }
+
+        li.current a{
+            font-weight: bold;
+        }
+        li.go-premium-cta a{
+            color: var(--primary-color);
+        }
+    }
 }
