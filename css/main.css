@@ -26,37 +26,8 @@ body {
   color: var(--primary-color);
 }
 
-.navbar nav.menu-btn {
-  display: block;
-}
-
 .navbar nav {
   display: none;
-  position: fixed;
-  z-index: 999;
-  width: 66%;
-  right: 0;
-  top: 0;
-  background: #333333;
-  height: 100vh;
-  padding: 1em;
-}
-
-.navbar nav ul.primary-nav {
-  margin-top: 5em;
-}
-
-.navbar nav li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: .5em;
-  font-size: 1.3em;
-  text-align: right;
-}
-
-.navbar nav li:hover {
-  font-weight: bold;
 }
 
 .navbar .container {
@@ -234,6 +205,38 @@ input[type='submit'] {
 iframe {
   width: 100%;
   height: 300px;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #333333;
+  height: 100vh;
+  padding: 1em;
+}
+
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li:hover {
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 768px) {
